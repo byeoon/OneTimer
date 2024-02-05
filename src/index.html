@@ -6,61 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>OnTimer</title>
     <meta name="description" content="All in one clock and timer that connects to multiple devices.">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
+    <center>
+        <div class="center-screen">
+            <h2 id="time">Time Placeholder</h2>
+            <h3>What would you like to do?</h3>
+            <br>
+            <button id="selectbutton" onClick="TimerSetup()">New Timer </button>
+            <button id="selectbutton">Placeholder </button>
 
 
-<center>
-    <div class="center-screen">
-        <h2 id="time">Time Placeholder</h2>
-        <h3>What would you like to do?</h3>
-        <br>
-        <button id="selectbutton" onClick="TimerSetup()">New Timer </button>
-        <button id="selectbutton">Placeholder </button>
-   
-
-        <div id="currentTimers">
-            <h3>Your current timers.</h3>
+            <div id="currentTimers">
+                <h3>Current Timers:</h3>
+            </div>
         </div>
-        
-        
-    <div id="pinnedtimezones"> 
-        <h6>Your pinned timezones.</h6>
+
+        <div id="pinnedtimezones">
+            <h6>Pinned Timezones:</h6>
+            <br>
+            <p1 id="timezone1"></p1>
+            <br>
+            <p1 id="timezone2"></p1>
+            <br>
+            <p1 id="timezone3"></p1>
+            <br>
+            <br>
+            <details class="dropdown">
+                <summary role="button">
+                    <a class="button">+</a>
+                </summary>
+                <ul>
+                    <li><a href="#" onClick="AddEST()">EST</a></li>
+                    <li><a href="#">???</a></li>
+                </ul>
+            </details>
+        </div>
         <br>
-        <p1 id="timezone1"></p1>
-        <br>
-        <p1 id="timezone2"></p1>
-        <br>
-        <p1 id="timezone3"></p1>
-        <br>
-        <br>
-        <details class="dropdown">
-            <summary role="button">
-              <a class="button">+</a>
-            </summary>
-            <ul>
-              <li><a href="#" onClick="AddEST()">EST</a></li>
-              <li><a href="#">???</a></li>
-          </ul>
-        </details>
-    </div>
-<br>
 
 
-</center>
+    </center>
 </body>
-</div>
+
 
 </html>
 <script src="./js/main.js"></script>

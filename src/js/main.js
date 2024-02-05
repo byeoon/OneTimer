@@ -8,3 +8,8 @@ function TimerSetup()
 {
     alert("Working on the timer setup function, please wait.");
 }
+
+function AddEST()
+{
+    console.log("WIP");
+}
