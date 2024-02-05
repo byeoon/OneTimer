@@ -16,32 +16,33 @@
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<script>
-const date = new Date();
-document.getElementById("time").textContent = date;
-</script>
+
 <body>
 
 
 
-    <center>
+<center>
         <h1 id="time">The time is: </h1>
         <h3>What would you like to do?</h3>
         <br>
         <button id="selectbutton" onClick="TimerSetup()">New Timer </button>
         <button id="selectbutton">Placeholder </button>
-    </center>
+   
 
     <div id="pinnedtimezones"> 
-
+        <h3>Your pinned timezones.</h3>
     </div>
 
     <div id="currentTimers">
-
-
+        <h3>Your current timers.</h3>
     </div>
 
-
+</center>
 </body>
+
+<script>
+    const date = new Date();
+    document.getElementById("time").textContent = "It is currently: " + date;
+</script>
 
 </html>
