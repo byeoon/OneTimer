@@ -9,7 +9,6 @@
   }
 
   
-
   body {
     background: linear-gradient(-45deg, #eb8b5f, #f35151, #235bd5, #16c8df);
     background-size: 400% 400%;
@@ -25,7 +24,7 @@
   
   #time {
     font-weight: bolder;
-    font-size: 24px;
+    font-size: 48px;
   }
 
   .center-screen {
@@ -60,7 +59,17 @@
 }
 
 #selectbutton {
-    color: #1ff1ff;
+    display: inline-block;
+    background: #5052BA;
+    border: 2px #1a7e75 solid;
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 5rem;
+    margin: 12px;
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+    font-size: 14px;
 }
 
 
