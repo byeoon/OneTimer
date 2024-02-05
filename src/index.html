@@ -18,18 +18,28 @@
 </head>
 <script>
 const date = new Date();
-document.getElementById("time").innerHTML = date;
+document.getElementById("time").textContent = date;
 </script>
 <body>
 
+
+
     <center>
-        <h1 id="time"></h1>
+        <h1 id="time">The time is: </h1>
         <h3>What would you like to do?</h3>
         <br>
-        <button id="selectbutton">Create Timer </button>
+        <button id="selectbutton" onClick="TimerSetup()">New Timer </button>
         <button id="selectbutton">Placeholder </button>
     </center>
 
+    <div id="pinnedtimezones"> 
+
+    </div>
+
+    <div id="currentTimers">
+
+
+    </div>
 
 
 </body>
