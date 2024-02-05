@@ -11,7 +11,7 @@
   
 
   body {
-    background: linear-gradient(-45deg, #ee8352, #e73c3c, #235bd5, #16dfb0);
+    background: linear-gradient(-45deg, #eb8b5f, #f35151, #235bd5, #16c8df);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
@@ -25,14 +25,15 @@
   
   #time {
     font-weight: bolder;
+    font-size: 24px;
   }
 
   .center-screen {
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
     min-height: 100vh;
+    flex-direction: column;
   }
 
 
@@ -50,7 +51,7 @@
   }
   
 
-#pinnedtimezones, #currenttimers {
+#pinnedtimezones, #currentTimers {
     border: solid 3px white;
     max-width: 600px;
     max-height: 600px;
