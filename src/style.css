@@ -9,6 +9,7 @@
   }
 
   
+
   body {
     background: linear-gradient(-45deg, #eb8b5f, #f35151, #235bd5, #16c8df);
     background-size: 400% 400%;
@@ -24,7 +25,7 @@
   
   #time {
     font-weight: bolder;
-    font-size: 48px;
+    font-size: 52px;
   }
 
   .center-screen {
@@ -33,7 +34,13 @@
     text-align: center;
     min-height: 100vh;
     flex-direction: column;
+    
+    flex-wrap: wrap;
   }
+
+  .center-screen > div {
+    margin: 10px;
+}
 
 
   
@@ -54,22 +61,26 @@
     border: solid 3px white;
     max-width: 600px;
     max-height: 600px;
-    width: 250px;
+    width: 300px;
     height: 300px;
 }
 
-#selectbutton {
-    display: inline-block;
-    background: #5052BA;
-    border: 2px #1a7e75 solid;
-    color: white;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
-    border-radius: 5rem;
-    margin: 12px;
-    cursor: pointer;
-    width: 64px;
-    height: 64px;
-    font-size: 14px;
+#selectbutton, .selectbutton {
+  -webkit-app-region: no-drag;
+  display: inline-block;
+  background-color: #25263A;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.9rem;
+  border-radius: 1.0rem;
+  font-size: 1.0rem;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
 }
 
 

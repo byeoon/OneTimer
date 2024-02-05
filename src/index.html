@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -10,49 +9,47 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/gh/hung1001/font-awesome-pro@4cac1a6/css/all.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone.min.js"></script>
+    
+
 </head>
+
 <body>
 
-    <center>
-        <div class="center-screen">
+    <div class="center-screen">
+        <div>
             <h2 id="time">12:00:00</h2>
             <h3>What would you like to do?</h3>
             <br>
+            <div class="button-container">
             <button id="selectbutton" onClick="TimerSetup()">New Timer </button>
             <button id="selectbutton">WIP </button>
-
-
+            </div>
+<br>
             <div id="currentTimers">
                 <br>
                 <h3>Current Timers:</h3>
                 <br>
             </div>
         </div>
-<br>
+
         <div id="pinnedtimezones">
-            <h6>Pinned Timezones:</h6>
             <br>
-            <p1 id="timezone1"></p1>
+            <h3>My Timezones:</h3>
             <br>
-            <p1 id="timezone2"></p1>
+            <ul id="timezoneList">
+                <!-- Add timezones dynamically using JavaScript -->
+            </ul>
             <br>
-            <p1 id="timezone3"></p1>
-            <br>
-            <br>
-            <details class="dropdown">
-                <summary role="button">
-                    <a class="button">+</a>
-                </summary>
-                <ul>
-                    <li><a href="#" onClick="AddEST()">EST</a></li>
-                    <li><a href="#">???</a></li>
-                </ul>
-            </details>
+            <select id="timezoneSelect" class="dropdown">
+                <option value="">Select a Timezone</option>
+            </select>
+            
+            
         </div>
-        <br>
-
-
-    </center>
+    </div>
 </body>
 
 
@@ -62,4 +59,28 @@
 
 <script>
     setInterval(updateTime, 1000);
+
+    document.addEventListener("DOMContentLoaded", function() {
+            // Get a reference to the dropdown element
+            const dropdown = document.getElementById('timezoneSelect');
+
+            // Get an array of all timezones
+            const allTimezones = moment.tz.names();
+
+            // Loop through the array of timezones and create an <option> element for each one
+            allTimezones.forEach(timezone => {
+                console.log("Processing timezone:", timezone);
+                const option = document.createElement('option');
+                option.value = timezone;
+                option.textContent = timezone;
+                dropdown.appendChild(option);
+            });
+
+            // Event listener for timezone selection from dropdown
+            dropdown.addEventListener('change', function() {
+                const selectedTimezone = this.value;
+                addTimezone(selectedTimezone);
+            });
+        });
+
 </script>
