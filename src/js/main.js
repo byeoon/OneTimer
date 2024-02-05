@@ -1,13 +1,7 @@
-
-function updateMainClock()
-{
-    const date = new Date();
-    document.getElementById("time").textContent = date;
-}
-function getTime()
-{
-    return new Date().getTime();;
-}
+function updateTime() {
+    now = new Date();
+    document.getElementById("time").textContent = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
+ }
 
 function TimerSetup()
 {

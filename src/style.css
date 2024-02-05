@@ -33,6 +33,10 @@
 
 #pinnedtimezones {
     border: solid 3px white;
+    max-width: 600px;
+    max-height: 600px;
+    width: 250px;
+    height: 300px;
 }
 
 #selectbutton {
