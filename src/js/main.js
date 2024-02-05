@@ -1,8 +1,7 @@
 
-
-const date = new Date();
 function updateMainClock()
 {
+    const date = new Date();
     document.getElementById("time").textContent = date;
 }
 function getTime()
