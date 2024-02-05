@@ -22,7 +22,7 @@
 
 
 <center>
-        <h1 id="time">The time is: </h1>
+        <h2 id="time">The time is: </h2>
         <h3>What would you like to do?</h3>
         <br>
         <button id="selectbutton" onClick="TimerSetup()">New Timer </button>
@@ -30,9 +30,15 @@
    
 
     <div id="pinnedtimezones"> 
-        <h3>Your pinned timezones.</h3>
+        <h6>Your pinned timezones.</h6>
+        <br>
+        <p1 id="timezone1"></p1>
+        <br>
+        <p1 id="timezone2"></p1>
+        <br>
+        <p1 id="timezone3"></p1>
     </div>
-
+<br>
     <div id="currentTimers">
         <h3>Your current timers.</h3>
     </div>
@@ -42,7 +48,7 @@
 
 <script>
     const date = new Date();
-    document.getElementById("time").textContent = "It is currently: " + date;
+    setInterval(document.getElementById("time").textContent = date, 1000);
 </script>
 
 </html>
