@@ -29,6 +29,11 @@
         <button id="selectbutton">Placeholder </button>
    
 
+        <div id="currentTimers">
+            <h3>Your current timers.</h3>
+        </div>
+        
+        
     <div id="pinnedtimezones"> 
         <h6>Your pinned timezones.</h6>
         <br>
@@ -37,18 +42,29 @@
         <p1 id="timezone2"></p1>
         <br>
         <p1 id="timezone3"></p1>
+        <br>
+        <br>
+        <details class="dropdown">
+            <summary role="button">
+              <a class="button">+</a>
+            </summary>
+            <ul>
+              <li><a href="#">EST</a></li>
+              <li><a href="#">???</a></li>
+          </ul>
+        </details>
     </div>
 <br>
-    <div id="currentTimers">
-        <h3>Your current timers.</h3>
-    </div>
+
 
 </center>
 </body>
 
-<script>
-    const date = new Date();
-    setInterval(document.getElementById("time").textContent = date, 1000);
-</script>
 
 </html>
+<script src="/js/main.js"></script>
+
+
+<script>
+    setInterval(updateMainClock(), 1000);
+</script>

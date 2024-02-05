@@ -1,5 +1,5 @@
 :root {
-    --button-background: dodgerblue;
+    --button-background: rgb(73, 177, 44);
     --button-color: white;
     
     --dropdown-highlight: dodgerblue;
@@ -15,8 +15,12 @@ body {
     color: #fff;
 }
 
-.pinnedtimezones, #pinnedtimezones {
+#pinnedtimezones {
     border: solid 3px white;
+}
+
+#selectbutton {
+    color: #1ff1ff;
 }
 
 
