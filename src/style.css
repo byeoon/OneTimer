@@ -8,6 +8,8 @@
     --dropdown-color: black;
   }
 
+
+
   
 
   body {
@@ -16,6 +18,7 @@
     animation: gradient 15s ease infinite;
     height: 100vh;
     display:flex;
+    justify-content:center;
   }
 
   h2, h3, h4, p1, p2, p3 {
@@ -33,7 +36,6 @@
     text-align: center;
     min-height: 100vh;
     flex-direction: column;
-    
     flex-wrap: wrap;
   }
 
@@ -42,7 +44,6 @@
 }
 
 
-  
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
