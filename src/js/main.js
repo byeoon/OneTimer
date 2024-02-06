@@ -3,18 +3,13 @@ function updateTime() {
     document.getElementById("time").textContent = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + " ";
  }
 
-
 function TimerSetup()
 {
     alert("Working on the timer setup function, please wait.");
 }
 
-
 function getTimezoneAbbreviation(timezone) {
-    // Create a Date object for the current time in the specified timezone
     const date = new Date().toLocaleString('en', {timeZone: timezone});
-
-    // Use Intl.DateTimeFormat to format the timezone abbreviation
     const timezoneAbbreviation = new Intl.DateTimeFormat('en', {timeZoneName: 'short'}).formatToParts(new Date(date)).find(part => part.type === 'timeZoneName').value;
 
     return timezoneAbbreviation;
@@ -29,12 +24,10 @@ function addTimezone(timezone) {
     const abbreviation = getTimezoneAbbreviation(timezone) || "Unknown";
 
     label.innerHTML = `<i class="fas fa-globe fa-2xs" style="color: #fff;"> </i> ` + abbreviation + ': ';
-    time.id = timezone; // Use the timezone name as the ID for the time span
-    time.textContent = getCurrentTime(timezone); // Set initial time
-
+    time.id = timezone; 
+    time.textContent = getCurrentTime(timezone);
     setInterval(function() {
-        // Update time every second
-        time.textContent = getCurrentTime(timezone);
+        time.textContent = getCurrentTime(timezone); 
     }, 1000);
 
     li.appendChild(label);
@@ -51,11 +44,10 @@ function getCurrentTime(timezone) {
 function savePinnedTimezones() {
     const timezoneList = document.getElementById('timezoneList');
     const pinnedTimezones = Array.from(timezoneList.getElementsByTagName('li')).map(a => a.textContent);
-    console.log("Pinned Timezones:", pinnedTimezones); // Log pinned timezones
+    console.log("Pinned Timezones:", pinnedTimezones);
     localStorage.setItem('pinnedTimezones', JSON.stringify(pinnedTimezones));
 }
 
-// Function to load pinned timezones from localStorage
 function loadPinnedTimezones() {
     const pinnedTimezones = JSON.parse(localStorage.getItem('pinnedTimezones')) || [];
     pinnedTimezones.forEach(timezone => addTimezone(timezone));
