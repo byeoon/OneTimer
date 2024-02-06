@@ -10,7 +10,7 @@
 
   ul {
     list-style: none;
-    font-size: 14px;
+    font-size: 19px;
   }
 
   
@@ -27,7 +27,7 @@
   #ver {
     position: absolute;
     bottom: 0;
-    left: 95%;
+    left: 99%;
   }
 
   h2, h3, h4, p1, p2, p3 {
