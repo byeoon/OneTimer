@@ -61,6 +61,12 @@
     setInterval(updateTime, 1000);
 
     document.addEventListener("DOMContentLoaded", function() {
+        moment.tz.load({
+    zones : [],
+    links : [],
+    version : '2014e'
+});
+
             // Get a reference to the dropdown element
             const dropdown = document.getElementById('timezoneSelect');
 
