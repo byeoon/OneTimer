@@ -14,14 +14,15 @@
 
 </head>
 
-<nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
-      <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-      Bootstrap
-    </a>
-  </nav>
 
 <body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+          <img src="/docs/4.0/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+          Bootstrap
+        </a>
+      </nav>
+
 
     <div class="center-screen">
         <div>
@@ -44,15 +45,14 @@
             <br>
             <h3>Pinned Timezones:</h3>
             <br>
+            <select id="timezoneSelect" class="dropdown">
+                <option value="">Add a Timezone</option>
+            </select>
+            <br>
             <ul id="timezoneList">
                 <!-- Add timezones dynamically using JavaScript -->
             </ul>
             <br>
-            <select id="timezoneSelect" class="dropdown">
-                <option value="">Select a Timezone</option>
-            </select>
-            
-            
         </div>
     </div>
 
@@ -73,6 +73,11 @@
     links : [],
     version : '2014e'
 });
+
+moment.tz.add([
+    'America/Los_Angeles|PST PDT|80 70|0101|1Lzm0 1zb0 Op0',
+    'America/New_York|EST EDT|50 40|0101|1Lz50 1zb0 Op0'
+]);
 
     document.addEventListener("DOMContentLoaded", function() {
             // Get a reference to the dropdown element
