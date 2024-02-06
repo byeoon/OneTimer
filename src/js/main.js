@@ -21,9 +21,7 @@ function addTimezone(timezone) {
     const label = document.createElement('span');
     const time = document.createElement('span');
 
-    const abbreviation = getTimezoneAbbreviation(timezone) || "Unknown";
-
-    label.innerHTML = `<i class="fas fa-globe fa-2xs" style="color: #fff;"> </i> ` + abbreviation + ': ';
+    label.innerHTML = `<i class="fas fa-globe fa-2xs" style="color: #fff;"> </i> ` + timezone + ': ';
     time.id = timezone; 
     time.textContent = getCurrentTime(timezone);
     setInterval(function() {
