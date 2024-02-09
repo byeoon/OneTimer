@@ -26,13 +26,8 @@
   }
 
 
-  bodyscreensaver {
-    background: linear-gradient(-45deg, #945538, #852929, #042262, #0a7c8b);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 100vh;
-    display:flex;
-    justify-content:center;
+  #screensaver {
+    background: linear-gradient(-45deg, #945538, #852929, #042262, #0a7c8b) !important;
   }
 
 
