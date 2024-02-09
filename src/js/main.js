@@ -7,7 +7,7 @@ function updateTime() {
 
  function updateTimeScreensaver() {
     now = new Date();
-    document.getElementById("time2").textContent = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + " ";
+    document.getElementById("time2").innerHTML = `<i class="fas fa-clock fa-2xs" style="color: #fff;"> </i> ` + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + " ";
  }
 
 function TimerSetup()
