@@ -4,6 +4,7 @@ var activeTimers;
 function updateTime() {
     now = new Date();
     document.getElementById("time").textContent = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + " ";
+    document.getElementById("time2").textContent = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + " ";
  }
 
 function TimerSetup()
