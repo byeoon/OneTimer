@@ -1,3 +1,6 @@
+var activeTimers;
+
+
 function updateTime() {
     now = new Date();
     document.getElementById("time").textContent = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + " ";
@@ -6,6 +9,15 @@ function updateTime() {
 function TimerSetup()
 {
     alert("Working on the timer setup function, please wait.");
+
+    if(activeTimers == 0)
+    {
+        document.getElementById("activetimers").textContent = "No active timers.";
+    }
+    else
+    {
+        document.getElementById("activetimers").style.visibility = "hidden";
+    }
 }
 
 function getTimezoneAbbreviation(timezone) {
