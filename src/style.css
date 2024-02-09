@@ -28,6 +28,7 @@
 
   #screensaver {
     background: linear-gradient(-45deg, #945538, #852929, #042262, #0a7c8b) !important;
+    animation: gradient 15s ease infinite !important;
   }
 
 
