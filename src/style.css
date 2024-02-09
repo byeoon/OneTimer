@@ -41,6 +41,12 @@
     left: 97%;
   }
 
+  #nav {
+    position: absolute;
+    top: 0;
+    right: 97%;
+  }
+
   h2, h3, h4, p1, p2, p3 {
     font-weight: lighter;
   }

@@ -1,4 +1,4 @@
-var activeTimers;
+var activeTimers = 0;
 
 function updateTime() {
     now = new Date();
