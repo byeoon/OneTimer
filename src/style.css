@@ -104,6 +104,10 @@
   margin: 5px;
 }
 
+#selectbutton:hover, .selectbutton:hover {
+  background-color: rgb(62, 63, 97);
+}
+
 .button-container {
   display: flex;
   justify-content: center;

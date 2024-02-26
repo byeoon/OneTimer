@@ -16,11 +16,11 @@ function TimerSetup()
 
     if(activeTimers == 0)
     {
-        document.getElementById("activetimers").textContent = "No active timers.";
+        document.getElementById("currentTimers").style.visibility = "hidden";
     }
     else
     {
-        document.getElementById("activetimers").style.visibility = "hidden";
+        document.getElementById("currentTimers").style.visibility = "block";
     }
 }
 
