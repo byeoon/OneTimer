@@ -1,10 +1,20 @@
 var activeTimers = 0;
-var timerCountdown = new Date(document.getElementById("timerbox").value).toString().getTime();
+var timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
+
+const getNavigatorLanguage = () => {
+    if (navigator.languages && navigator.languages.length) {
+      return navigator.languages[0];
+    } else {
+      return navigator.userLanguage || navigator.language || navigator.browserLanguage || 'en';
+    }
+  }
 
 
 function updateTime() {
     now = new Date();
-    document.getElementById("time").textContent = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + " ";
+    document.getElementById("time").textContent =  time.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+    document.getElementById("timezone").textContent = now.getTimezoneAbbreviation();
+    
  }
 
  function updateTimeScreensaver() {
