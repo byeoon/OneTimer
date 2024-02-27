@@ -11,14 +11,14 @@ const getNavigatorLanguage = () => {
 
 function updateTime() {
     now = new Date();
-    document.getElementById("time").textContent = "" + now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-    document.getElementById("timezone").textContent = now.getTimezoneAbbreviation();
+    document.getElementById("time").textContent = now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+    document.getElementById("timezone").textContent = now.toLocaleString('undefined',{timeZoneName:'short'}).split(' ')[2]; // gets the user's current locale
     
  }
 
  function updateTimeScreensaver() {
     now = new Date();
-    document.getElementById("time2").innerHTML = `<i class="fas fa-clock fa-2xs" style="color: #fff;"> </i> ` + now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + " ";
+    document.getElementById("time2").innerHTML = `<i class="fas fa-clock fa-2xs" style="color: #fff;"> </i> ` + now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
  }
 
 function TimerSetup()
