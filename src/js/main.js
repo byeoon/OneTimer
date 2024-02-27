@@ -1,5 +1,5 @@
 var activeTimers = 0;
-var timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
+var timerCountdown = new Date(document.getElementById("timerbox").value).toString().getTime();
 
 
 function updateTime() {
@@ -26,9 +26,10 @@ function TimerSetup()
     }
 }
 
-function CreateTimerFR()
+function createTimer()
 {
     alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
+    activeTimers++;
 }
 
 function hidePopout()
