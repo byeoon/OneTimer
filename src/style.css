@@ -110,4 +110,20 @@
   justify-content: center;
 }
 
+.timer-create-popout, #timer-create-popout {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color-msg);
+  box-shadow: 0 0 20px rgba(0, 0, 40, 0.55);
+  max-width: 300px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid var(--text-color);
+}
+
 

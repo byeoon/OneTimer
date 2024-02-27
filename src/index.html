@@ -30,7 +30,7 @@
                 <button id="selectbutton" onClick="window.location='screensaver.html';">Screensaver </button>
             </div>
             <br>
-            <div id="currentTimers" style="visibility: hidden;">
+            <div id="currentTimers" style="display: none;">
                 <br>
             </div>
         </div>
@@ -50,7 +50,7 @@
         </div>
     -->
 
-    <div class="timer-create-popout" id="timer-create-popout" style="display: none;">
+    <div class="timer-create-popout" id="timer-create-popout" style="display: hidden;">
         <button id="close-button" onclick="hidePopout()" style="position: absolute; top: 0; right: 0;">X</button>
         <br>
     
@@ -92,36 +92,7 @@
 
 
 <script>
-    setInterval(updateTime, 1000);
-    moment.tz.load({
-        zones: [],
-        links: [],
-        version: '2014e'
-    });
-
-    moment.tz.add([
-        'America/Los_Angeles|PST PDT|80 70|0101|1Lzm0 1zb0 Op0',
-        'America/New_York|EST EDT|50 40|0101|1Lz50 1zb0 Op0'
-    ]);
-
     document.addEventListener("DOMContentLoaded", function () {
-        const dropdown = document.getElementById('timezoneSelect');
-        const allTimezones = moment.tz.names();
-
-
-        allTimezones.forEach(timezone => {
-            console.log("Processing timezone:", timezone);
-            const option = document.createElement('option');
-            option.value = timezone;
-            option.textContent = timezone;
-            dropdown.appendChild(option);
-        });
-
-
-        dropdown.addEventListener('change', function () {
-            const selectedTimezone = this.value;
-            addTimezone(selectedTimezone);
-        });
     });
 
 </script>

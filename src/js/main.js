@@ -13,8 +13,7 @@ function updateTime() {
 
 function TimerSetup()
 {
-    alert("Working on the timer setup function, please wait.");
-    document.getElementById("timer-create-popout").style.visibility = "block";
+    document.getElementById("timer-create-popout").style.display = "block";
 
     if(activeTimers == 0)
     {
@@ -61,17 +60,3 @@ function getCurrentTime(timezone) {
     const options = { timeZone: timezone, hour: '2-digit', minute: '2-digit', second: '2-digit' };
     return new Date().toLocaleTimeString([], options);
 }
-
-function savePinnedTimezones() {
-    const timezoneList = document.getElementById('timezoneList');
-    const pinnedTimezones = Array.from(timezoneList.getElementsByTagName('li')).map(a => a.textContent);
-    console.log("Pinned Timezones:", pinnedTimezones);
-    localStorage.setItem('pinnedTimezones', JSON.stringify(pinnedTimezones));
-}
-
-function loadPinnedTimezones() {
-    const pinnedTimezones = JSON.parse(localStorage.getItem('pinnedTimezones')) || [];
-    pinnedTimezones.forEach(timezone => addTimezone(timezone));
-}
-
-loadPinnedTimezones();
