@@ -1,6 +1,5 @@
 var activeTimers = 0;
 var timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
-
 const getNavigatorLanguage = () => {
     if (navigator.languages && navigator.languages.length) {
       return navigator.languages[0];
@@ -12,7 +11,7 @@ const getNavigatorLanguage = () => {
 
 function updateTime() {
     now = new Date();
-    document.getElementById("time").textContent =  time.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+    document.getElementById("time").textContent = "" + now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
     document.getElementById("timezone").textContent = now.getTimezoneAbbreviation();
     
  }
