@@ -1,4 +1,5 @@
 var activeTimers = 0;
+var timerCountdown = new Date(document.getElementById("timerbox").textContent).getTime();
 
 function updateTime() {
     now = new Date();
@@ -13,6 +14,7 @@ function updateTime() {
 function TimerSetup()
 {
     alert("Working on the timer setup function, please wait.");
+    document.getElementById("timer-create-popout").style.visibility = "block";
 
     if(activeTimers == 0)
     {
@@ -22,6 +24,11 @@ function TimerSetup()
     {
         document.getElementById("currentTimers").style.visibility = "block";
     }
+}
+
+function CreateTimerFR()
+{
+    alert(document.getElementById("timerbox").textContent);
 }
 
 function getTimezoneAbbreviation(timezone) {

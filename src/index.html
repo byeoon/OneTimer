@@ -49,8 +49,24 @@
             <br>
         </div>
     -->
-    </div>
+
+    <div class="timer-create-popout" id="timer-create-popout" style="display: none;">
+        <button id="close-button" onclick="hidePopout()" style="position: absolute; top: 0; right: 0;">X</button>
+        <br>
     
+        <div class="timer-info">
+            <p>When would you like for this to start? (24h)</p>
+            <input type="text" id="timerbox" name="timerbox"><br><br>
+       </div>
+
+        <br>
+        <div class="bio-text" style="background-color: #141414">
+         
+        </div>
+        <button id="start-button" onclick="CreateTimerFR()" style="position: absolute; top: 0; right: 0;">Start</button>
+      </div>
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -68,7 +84,7 @@
 </div>
 
 <div id="nav">
-    
+
 </div>
 
 </html>
