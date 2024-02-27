@@ -22,21 +22,20 @@
     <div class="center-screen">
         <div>
             <h2 id="time">12:00:00</h2>
-            <h3>What would you like to do?</h3>
+            <h3>What would you like to do today?</h3>
             <br>
             <div class="button-container">
-                <button id="selectbutton" onClick="TimerSetup()">New Timer </button>
+                <button id="selectbutton" onClick="TimerSetup()">Create A Timer </button>
                 <button id="selectbutton">WIP </button>
+                <button id="selectbutton" onClick="window.location='screensaver.html';">Screensaver </button>
             </div>
             <br>
-            <div id="currentTimers">
-                <br>
-                <h3>Current Timers:</h3>
-                <h6 id="activetimers">No timers active.</h6>
+            <div id="currentTimers" style="visibility: hidden;">
                 <br>
             </div>
         </div>
         <br>
+        <!--
         <div id="pinnedtimezones">
             <br>
             <h3>Pinned Timezones:</h3>
@@ -45,11 +44,13 @@
             </select>
             <br>
             <ul id="timezoneList">
-                <!-- Add timezones dynamically using JavaScript -->
+
             </ul>
             <br>
         </div>
+    -->
     </div>
+    
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -67,10 +68,7 @@
 </div>
 
 <div id="nav">
-    <h6>Test nav</h6>
-    <select id="settings" class="dropdown">
-        <option value="">Settings</option>
-    </select>
+    
 </div>
 
 </html>
@@ -91,13 +89,10 @@
     ]);
 
     document.addEventListener("DOMContentLoaded", function () {
-        // Get a reference to the dropdown element
         const dropdown = document.getElementById('timezoneSelect');
-
-        // Get an array of all timezones
         const allTimezones = moment.tz.names();
 
-        // Loop through the array of timezones and create an <option> element for each one
+
         allTimezones.forEach(timezone => {
             console.log("Processing timezone:", timezone);
             const option = document.createElement('option');
@@ -106,7 +101,7 @@
             dropdown.appendChild(option);
         });
 
-        // Event listener for timezone selection from dropdown
+
         dropdown.addEventListener('change', function () {
             const selectedTimezone = this.value;
             addTimezone(selectedTimezone);
