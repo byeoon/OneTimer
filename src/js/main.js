@@ -1,5 +1,5 @@
 var activeTimers = 0;
-var timerCountdown = new Date(document.getElementById("timerbox").textContent).getTime();
+var timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
 
 
 function updateTime() {
@@ -28,13 +28,15 @@ function TimerSetup()
 
 function CreateTimerFR()
 {
-    alert(document.getElementById("timerbox").textContent);
+    alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
 }
 
 function hidePopout()
 {
     document.getElementById("timer-create-popout").style.display = "none";
 }
+
+
 
 function getTimezoneAbbreviation(timezone) {
     const date = new Date().toLocaleString('en', {timeZone: timezone});

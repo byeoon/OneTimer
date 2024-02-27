@@ -51,6 +51,7 @@
   #time {
     font-weight: bolder;
     font-size: 52px;
+    backdrop-filter: blur(4px);
   }
 
   .center-screen {
