@@ -21,7 +21,7 @@
 <body>
     <div class="center-screen">
         <div>
-            <h2 id="time">12:00:00</h2>
+            <h2 id="time" style="backdrop-filter: blur(4px);">12:00:00</h2>
             <h3>What would you like to do today?</h3>
             <br>
             <div class="button-container">
@@ -56,14 +56,15 @@
     
         <div class="timer-info">
             <p>When would you like for this to start? (24h)</p>
-            <input type="text" id="timerbox" name="timerbox"><br><br>
+            <input type="text" id="timerbox" name="timerbox">
+            <br><br>
        </div>
 
         <br>
         <div class="bio-text" style="background-color: #141414">
          
         </div>
-        <button id="start-button" onclick="CreateTimerFR()" style="position: absolute; top: 0; right: 0;">Start</button>
+        <button id="start-button" onclick="CreateTimerFR()">Start</button>
       </div>
     </div>
 

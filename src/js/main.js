@@ -1,6 +1,7 @@
 var activeTimers = 0;
 var timerCountdown = new Date(document.getElementById("timerbox").textContent).getTime();
 
+
 function updateTime() {
     now = new Date();
     document.getElementById("time").textContent = now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds() + " ";
@@ -28,6 +29,11 @@ function TimerSetup()
 function CreateTimerFR()
 {
     alert(document.getElementById("timerbox").textContent);
+}
+
+function hidePopout()
+{
+    document.getElementById("timer-create-popout").style.display = "none";
 }
 
 function getTimezoneAbbreviation(timezone) {
