@@ -1,4 +1,5 @@
 var activeTimers = 0;
+var timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
 
 const getNavigatorLanguage = () => {
     if (navigator.languages && navigator.languages.length) {
@@ -8,17 +9,15 @@ const getNavigatorLanguage = () => {
     }
   }
 
+  const setNavigatorLanguage = () => {
+    
+  }
+
 
 function updateTime() {
     now = new Date();
     document.getElementById("time").textContent = now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-    document.getElementById("timezone").textContent = String(String(now).split("(")[1]).split(")")[0];
-    
- }
-
- function updateTimeScreensaver() {
-    now = new Date();
-    document.getElementById("time2").innerHTML = `<i class="fas fa-clock fa-2xs" style="color: #fff;"> </i> ` + now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+    document.getElementById("timezone").textContent = String(String(now).split("(")[1]).split(")")[0];  
  }
 
 function TimerSetup()
@@ -79,4 +78,4 @@ function getCurrentTime(timezone) {
     return new Date().toLocaleTimeString([], options);
 }
 
-var timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
+
