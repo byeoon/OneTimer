@@ -9,10 +9,6 @@ const getNavigatorLanguage = () => {
     }
   }
 
-  const setNavigatorLanguage = () => {
-    
-  }
-
 
 function updateTime() {
     now = new Date();
