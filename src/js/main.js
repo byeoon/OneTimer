@@ -32,10 +32,33 @@ function TimerSetup()
 
 function createTimer()
 {
+    
+    startTimer(time);
+    TimerSetup();
     timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
+    timerConvert = new Date(document.getElementById("timerbox").value).getUTCSeconds();
     alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
+    var time = timerConvert / 2;
     activeTimers++;
 }
+
+function startTimer(duration) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        document.getElementById("time").textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            timer = 0;
+        }
+    }, 1000);
+}
+
 
 function hidePopout()
 {
