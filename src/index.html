@@ -23,7 +23,7 @@
 <body>
     <div class="center-screen">
         <div>
-            <h2 id="time">12:00:00</h2>
+            <h2 id="time">12:00:00 </h2> <button id="close-button" onclick="hidePopout()" style="position: absolute; top: 0; right: 0;">S</button> 
             <h6 id="timezone">NIL</h6>
             <h3>What would you like to do today?</h3>
             <br>
@@ -52,7 +52,7 @@
         </div>
     -->
 
-    <div class="animate__zoomIn" id="timer-create-popout" style="display: hidden;">
+    <div class="animate__animated animate__zoomIn" id="timer-create-popout" style="display: hidden;">
         <button id="close-button" onclick="hidePopout()" style="position: absolute; top: 0; right: 0;">X</button>
         <br>
     
@@ -62,6 +62,8 @@
             <input type="datetime-local" id="timerbox" name="timerbox">
             <br><br>
             <h3>Extras</h3>
+            <br>
+            
        </div>
 
         <br>

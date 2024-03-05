@@ -1,5 +1,5 @@
 var activeTimers = 0;
-var timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
+var timerCountdown = 0;
 
 const getNavigatorLanguage = () => {
     if (navigator.languages && navigator.languages.length) {
@@ -32,6 +32,7 @@ function TimerSetup()
 
 function createTimer()
 {
+    timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
     alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
     activeTimers++;
 }
