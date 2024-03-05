@@ -23,7 +23,8 @@
 <body>
     <div class="center-screen">
         <div>
-            <h2 id="time">12:00:00 </h2> <button id="close-button" onclick="hidePopout()">S</button> 
+            <h2 id="timerCURRENTTHING" style="display: none;">12:00:00 </h2>
+            <h2 id="time">12:00:00 </h2> <button id="close-button" onclick="hidePopout()">Switch</button> 
             <h6 id="timezone">NIL</h6>
             <h3>What would you like to do today?</h3>
             <br>
@@ -37,20 +38,6 @@
             </div>
         </div>
         <br>
-        <!--
-        <div id="pinnedtimezones">
-            <br>
-            <h3>Pinned Timezones:</h3>
-            <select id="timezoneSelect" class="dropdown">
-                <option value="">Add a Timezone</option>
-            </select>
-            <br>
-            <ul id="timezoneList">
-
-            </ul>
-            <br>
-        </div>
-    -->
 
     <div class="animate__animated animate__zoomIn" id="timer-create-popout" style="display: hidden;">
         <button id="close-button" onclick="hidePopout()" style="position: absolute; top: 0; right: 0;">X</button>

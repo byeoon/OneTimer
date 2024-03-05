@@ -32,7 +32,7 @@ function TimerSetup()
 
 function createTimer()
 {
-    timerCountdown = new Date(document.getElementById("timerbox").value).getUTCSeconds();
+    timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
     var time = timerCountdown / 2;
 
     startTimer(time);
@@ -41,9 +41,9 @@ function createTimer()
 }
 
 function startTimer(duration) {
-    console.log("debug: " + duration + " " + minutes + " " + seconds)
     var timer = duration, minutes, seconds;
     setInterval(function () {
+        console.log("debug: " + duration + " " + minutes + " " + seconds);
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 
