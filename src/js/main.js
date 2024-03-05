@@ -32,17 +32,16 @@ function TimerSetup()
 
 function createTimer()
 {
-    
+    timerCountdown = new Date(document.getElementById("timerbox").value).getUTCSeconds();
+    var time = timerCountdown / 2;
+
     startTimer(time);
-    TimerSetup();
-    timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
-    timerConvert = new Date(document.getElementById("timerbox").value).getUTCSeconds();
     alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
-    var time = timerConvert / 2;
     activeTimers++;
 }
 
 function startTimer(duration) {
+    console.log("debug: " + duration + " " + minutes + " " + seconds)
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10)
@@ -72,25 +71,6 @@ function getTimezoneAbbreviation(timezone) {
     const timezoneAbbreviation = new Intl.DateTimeFormat('en', {timeZoneName: 'short'}).formatToParts(new Date(date)).find(part => part.type === 'timeZoneName').value;
 
     return timezoneAbbreviation;
-}
-
-function addTimezone(timezone) {
-    const timezoneList = document.getElementById('timezoneList');
-    const li = document.createElement('li');
-    const label = document.createElement('span');
-    const time = document.createElement('span');
-
-    label.innerHTML = `<i class="fas fa-globe fa-2xs" style="color: #fff;"> </i> ` + timezone + ': ';
-    time.id = timezone; 
-    time.textContent = getCurrentTime(timezone);
-    setInterval(function() {
-        time.textContent = getCurrentTime(timezone); 
-    }, 1000);
-
-    li.appendChild(label);
-    li.appendChild(time);
-    timezoneList.appendChild(li);
-    savePinnedTimezones();
 }
 
 function getCurrentTime(timezone) {
