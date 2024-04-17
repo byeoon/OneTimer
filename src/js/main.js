@@ -51,8 +51,9 @@ function startTimer(duration) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        if(mode = "timer")
+        if(mode == "timer") {
             document.getElementById("time").textContent = minutes + ":" + seconds;
+        }
 
         if (--timer < 0) {
             timer = 0;
