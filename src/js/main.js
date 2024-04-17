@@ -38,11 +38,11 @@ function createTimer()
     startTimer(time);
     alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
     activeTimers++;
-    mode = "timer";
 }
 
 function startTimer(duration) {
     var timer = duration, minutes, seconds;
+    mode = "timer";
     setInterval(function () {
         console.log("debug: " + duration + " " + minutes + " " + seconds);
         minutes = parseInt(timer / 60, 10)
@@ -51,7 +51,8 @@ function startTimer(duration) {
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        document.getElementById("time").textContent = minutes + ":" + seconds;
+        if(mode = "timer")
+            document.getElementById("time").textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
             timer = 0;
@@ -63,7 +64,15 @@ function startTimer(duration) {
 function hidePopout()
 {
     document.getElementById("timer-create-popout").style.display = "none";
-    mode = "clock";
+    if(mode == "clock")
+    {
+        mode = "timer";
+    }
+
+    if(mode == "timer")
+    {
+        mode = "clock";
+    }
 }
 
 function getCurrentTime(timezone) {
