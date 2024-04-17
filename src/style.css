@@ -14,23 +14,13 @@
   
 
   body {
-    background: linear-gradient(-45deg, #ff9361, #ff3b3b, #e83bff, #2b67e9, #16c8df,#28d05d, #63d511  );
+    background: linear-gradient(-46deg, #ff9361, #ff3b3b, #e83bff, #2b67e9, #16c8df,#28d05d, #63d511  );
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
     display:flex;
     justify-content:center;
   }
-
-
-  #screensaver {
-    background: linear-gradient(-45deg, #9e512e, #912424, #072d7f, #05375d);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    display:flex;
-    justify-content:center;
-  }
-
 
   #ver {
     position: absolute;
