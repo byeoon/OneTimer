@@ -45,7 +45,7 @@ function createTimer()
     startTimer(time);
     alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
     activeTimers++;
-    mode = clock;
+    mode = "timer";
     hidePopout();
 }
 
