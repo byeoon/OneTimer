@@ -1,2 +1,2 @@
-# OnTimer
-All in one clock and timer that connects to multiple devices.
+# OneTimer
+All in one clock and timer that connects to multiple devices. 
