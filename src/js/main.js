@@ -1,5 +1,8 @@
+// todo: lots of stuff needs to be fixed.
+
 var activeTimers = 0;
 var timerCountdown = 0;
+const mode = "clock";
 
 const getNavigatorLanguage = () => {
     if (navigator.languages && navigator.languages.length) {
@@ -12,7 +15,11 @@ const getNavigatorLanguage = () => {
 
 function updateTime() {
     now = new Date();
-    document.getElementById("time").textContent = now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+    if(activeTimers == 0 || mode == "clock")
+    {
+        document.getElementById("time").textContent = now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
+    }
+
     document.getElementById("timezone").textContent = String(String(now).split("(")[1]).split(")")[0];  
  }
 
@@ -38,6 +45,8 @@ function createTimer()
     startTimer(time);
     alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
     activeTimers++;
+    mode = clock;
+    hidePopout();
 }
 
 function startTimer(duration) {

@@ -14,7 +14,7 @@
   
 
   body {
-    background: linear-gradient(-45deg, #eb8b5f, #f35151, #235bd5, #16c8df);
+    background: linear-gradient(-45deg, #ff9361, #ff3b3b, #e83bff #2b67e9, #16c8df,#28d05d, #63d511  );
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     height: 100vh;
@@ -24,7 +24,7 @@
 
 
   #screensaver {
-    background: linear-gradient(-45deg, #b46d4d, #a73737, #072d7f, #05375d);
+    background: linear-gradient(-45deg, #9e512e, #912424, #072d7f, #05375d);
     background-size: 400% 400%;
     animation: gradient 15s ease infinite;
     display:flex;

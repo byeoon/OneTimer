@@ -5,9 +5,9 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
 )
 
 
-title OnTimer First Setup
-echo If you want other devices to integrate and sync with OnTimer, this setup will be required.
-echo OnTimer will now install Node.js and setup a host server, a UAC prompt may show up during installation.
+title OneTimer Initial Setup
+echo If you want other devices to integrate and sync with OneTimer, this setup will be required.
+echo OneTimer will now install Node.js and setup a host server, a UAC prompt may show up during installation.
 @echo on
 
 winget install -e --id OpenJS.NodeJS
