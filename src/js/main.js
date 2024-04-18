@@ -30,18 +30,16 @@ function showAlarms()
 
 function createTimer()
 {
-    document.getElementById("currentTimers").innerHTML = "";
     timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
+    timerNames.push("" + document.getElementById("timername").value());
     var time = timerCountdown / 2;
-
     startTimer(time);
     alert("countdown: " + timerCountdown);
     activeTimers++;
-    timerNames.push(document.getElementById("timername").value());
 
     timerNames.forEach(function(addToList) {
-        str += '<li>'+ timerNames + '</li>';
-      }); 
+        str += '<li>'+ addToList + '</li>';
+    });
       str += '</ul>';
     document.getElementById("currentTimers").innerHTML = str;
 }
