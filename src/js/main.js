@@ -40,7 +40,6 @@ function createTimer()
 
 function startTimer(duration) {
     var timer = duration, minutes, seconds;
-    mode = "timer";
     setInterval(function () {
         console.log("debug: " + duration + " " + minutes + " " + seconds);
         minutes = parseInt(timer / 60, 10)
