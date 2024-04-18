@@ -40,11 +40,11 @@ function createTimer()
     var time = timerCountdown / 2;
 
     startTimer(time);
-    alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
+    alert("countdown: " + timerCountdown);
     activeTimers++;
     timerNames.push(document.getElementById("timername").textContent);
 
-    timerNames.forEach(function(timerNames) {
+    timerNames.forEach(function(addToList) {
         str += '<li>'+ timerNames + '</li>';
       }); 
       str += '</ul>';
