@@ -26,6 +26,11 @@ function TimerSetup()
         document.getElementById("currentTimers").style.visibility = "block";
 }
 
+function showAlarms()
+{
+    document.getElementById("alarms-list-popout").style.display = "block";
+}
+
 function createTimer()
 {
     timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
@@ -37,7 +42,6 @@ function createTimer()
 }
 
 function startTimer(duration) {
-    document.getElementById("timerCURRENTTHING").visibility = "visible";
     var timer = duration, minutes, seconds;
     setInterval(function () {
         console.log("debug: " + duration + " " + minutes + " " + seconds);
@@ -46,7 +50,7 @@ function startTimer(duration) {
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-        document.getElementById("timerCURRENTTHING").visibility = "visible";
+        document.getElementById("timerCURRENTTHING").style.visibility = "visible";
         document.getElementById("timerCURRENTTHING").textContent = minutes + ":" + seconds;
        
 
@@ -60,6 +64,7 @@ function startTimer(duration) {
 function hidePopout()
 {
     document.getElementById("timer-create-popout").style.display = "none";
+    document.getElementById("alarms-list-popout").style.display = "none";
 }
 
 function getCurrentTime(timezone) {

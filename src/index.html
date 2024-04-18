@@ -43,7 +43,7 @@
             <p>When would you like the timer to go off?</p>
             <input type="datetime-local" id="timerbox" name="timerbox">
             <br><br>
-            <h3>Extras</h3>
+            <h3>Additional Settings</h3>
             <br>
        </div>
 
@@ -52,17 +52,32 @@
          
         </div>
         <button id="selectbutton" onclick="createTimer()">Start Timer</button>
+    </div>
+
+
+
+    <div class="animate__animated animate__slideInUp" id="alarms-list-popout" style="display: hidden;">
+        <button id="close-button" onclick="hidePopout()" style="position: absolute; top: 0; right: 0;">X</button>
+        <br>
+    
+        <div class="timer-info">
+            <h3>My Alarms</h3>
+            <br>
+            <div id="currentTimers" style="display: none;">
+                <br>
+            </div>
+       </div>
       </div>
     </div>
 
     <div class="dock">
         <div class="dock-container">
             <button id="createbutton" onClick="TimerSetup()">  <i class="fas fa-plus"></i>  </button>
-            <button id="selectbutton" onclick="createTimer()"> <i class="fas fa-alarm-clock"></i> </button>
+            <button id="selectbutton" onclick="showAlarms()"> <i class="fas fa-alarm-clock"></i> </button>
             <button id="selectbutton" onclick="createTimer()"> <i class="far fa-globe"></i> </button>
             <button id="selectbutton" onclick="createTimer()"> <i class="fas fa-cog"></i> </button>
-            </div>
-            </div>
+        </div>
+    </div>
 
 
    
