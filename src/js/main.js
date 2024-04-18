@@ -14,9 +14,7 @@ const getNavigatorLanguage = () => {
 
 function updateTime() {
     now = new Date();
-    if(mode == "clock")
-        document.getElementById("time").textContent = now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
-    
+    document.getElementById("time").textContent = now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
     document.getElementById("timezone").textContent = String(String(now).split("(")[1]).split(")")[0];  
  }
 
@@ -50,10 +48,8 @@ function startTimer(duration) {
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-
-        if(mode == "timer") {
-            document.getElementById("time").textContent = minutes + ":" + seconds;
-        }
+        document.getElementById("timerCURRENTTHING").textContent = minutes + ":" + seconds;
+        document.getElementById("timerCURRENTTHING").display = "block";
 
         if (--timer < 0) {
             timer = 0;
@@ -65,15 +61,6 @@ function startTimer(duration) {
 function hidePopout()
 {
     document.getElementById("timer-create-popout").style.display = "none";
-    if(mode == "clock")
-    {
-        mode = "timer";
-    }
-
-    if(mode == "timer")
-    {
-        mode = "clock";
-    }
 }
 
 function getCurrentTime(timezone) {
