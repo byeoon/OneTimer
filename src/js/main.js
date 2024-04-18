@@ -45,8 +45,9 @@ function startTimer(duration) {
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-        document.getElementById("timerCURRENTTHING").textContent = minutes + ":" + seconds;
         document.getElementById("timerCURRENTTHING").display = "block";
+        document.getElementById("timerCURRENTTHING").textContent = minutes + ":" + seconds;
+       
 
         if (--timer < 0) {
             timer = 0;
