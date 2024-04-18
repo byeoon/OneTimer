@@ -37,6 +37,7 @@ function createTimer()
 }
 
 function startTimer(duration) {
+    document.getElementById("timerCURRENTTHING").display = "block";
     var timer = duration, minutes, seconds;
     setInterval(function () {
         console.log("debug: " + duration + " " + minutes + " " + seconds);
