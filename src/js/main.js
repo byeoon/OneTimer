@@ -1,7 +1,5 @@
-// todo: lots of stuff needs to be fixed.
 var activeTimers = 0;
 var timerCountdown = 0;
-const mode = "clock";
 
 const getNavigatorLanguage = () => {
     if (navigator.languages && navigator.languages.length) {

@@ -1,24 +1,28 @@
   ul {
     list-style: none;
     font-size: 18px;
-    justify-content:center;
+    justify-content: center;
   }
 
-  
+  #timerCURRENTTHING {
+    display: none;
+  }
+
+
 
   body {
-    background: linear-gradient(-46deg, #ff9361, #ff3b3b, #e83bff, #2b67e9, #16c8df,#28d05d, #63d511  );
+    background: linear-gradient(-46deg, #ff9361, #ff3b3b, #e83bff, #2b67e9, #16c8df, #28d05d, #63d511);
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
     height: 100vh;
-    display:flex;
-    justify-content:center;
+    display: flex;
+    justify-content: center;
   }
 
   #ver {
     position: absolute;
     bottom: 0;
-    left: 95%;
+    left: 91%;
   }
 
   #nav {
@@ -27,10 +31,13 @@
     left: 97%;
   }
 
-  h4, p1, p2, p3 {
+  h4,
+  p1,
+  p2,
+  p3 {
     font-weight: lighter;
   }
-  
+
   #time {
     font-weight: bolder;
     font-size: 52px;
@@ -46,85 +53,91 @@
     flex-wrap: wrap;
   }
 
-  .center-screen > div {
+  .center-screen>div {
     margin: 10px;
-}
+  }
 
 
   @keyframes gradient {
     0% {
       background-position: 0% 50%;
     }
+
     50% {
       background-position: 100% 50%;
     }
+
     100% {
       background-position: 0% 50%;
     }
   }
-  
 
-#pinnedtimezones, #currentTimers {
+
+  #pinnedtimezones,
+  #currentTimers {
     border: solid 3px white;
     max-width: 600px;
     max-height: 800px;
     width: 300px;
     height: 300px;
-}
+  }
 
-#selectbutton, .selectbutton {
-  -webkit-app-region: no-drag;
-  display: inline-block;
-  background-color: #25263A;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 0.9rem;
-  border-radius: 1.0rem;
-  font-size: 1.0rem;
-  cursor: pointer;
-  margin: 5px;
-}
+  #selectbutton,
+  .selectbutton {
+    -webkit-app-region: no-drag;
+    display: inline-block;
+    background-color: #25263A;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 1.0rem;
+    font-size: 1.0rem;
+    cursor: pointer;
+    margin: 5px;
+  }
 
-#close-button, .close-button {
-  -webkit-app-region: no-drag;
-  display: inline-block;
-  background-color: #351b1b;
-  color: #fff;
-  border: none;
-  padding: 0.5rem 0.9rem;
-  border-radius: 1.0rem;
-  font-size: 1.0rem;
-  cursor: pointer;
-  margin: 5px;
-}
+  #close-button,
+  .close-button {
+    -webkit-app-region: no-drag;
+    display: inline-block;
+    background-color: #351b1b;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 1.0rem;
+    font-size: 1.0rem;
+    cursor: pointer;
+    margin: 5px;
+  }
 
-#selectbutton:hover, .selectbutton:hover {
-  background-color: rgb(62, 63, 97);
-}
+  #selectbutton:hover,
+  .selectbutton:hover {
+    background-color: rgb(62, 63, 97);
+  }
 
-#close-button:hover, .close-button:hover {
-  background-color: rgb(97, 62, 62);
-}
+  #close-button:hover,
+  .close-button:hover {
+    background-color: rgb(97, 62, 62);
+  }
 
-.button-container {
-  display: flex;
-  justify-content: center;
-}
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
 
-.timer-create-popout, #timer-create-popout {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 20px;
-  background-color: #171717;
-  color: #fff;
-  box-shadow: 0 0 20px rgba(0, 0, 40, 0.6);
-  max-width: 300px;
-  text-align: center;
-  border-radius: 10px;
-  border: 1px solid #2d2942;
-}
-
-
+  .timer-create-popout,
+  #timer-create-popout {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #171717;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 40, 0.6);
+    max-width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid #2d2942;
+  }
