@@ -1,5 +1,7 @@
 var activeTimers = 0;
+var timerNames = [];
 var timerCountdown = 0;
+var str = '<ul>'
 
 const getNavigatorLanguage = () => {
     if (navigator.languages && navigator.languages.length) {
@@ -33,12 +35,20 @@ function showAlarms()
 
 function createTimer()
 {
+    document.getElementById("currentTimers").innerHTML = "";
     timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
     var time = timerCountdown / 2;
 
     startTimer(time);
     alert(document.getElementById("timerbox").value + "and also " + timerCountdown);
     activeTimers++;
+    timerNames.push(document.getElementById("timername").textContent);
+
+    timerNames.forEach(function(timerNames) {
+        str += '<li>'+ timerNames + '</li>';
+      }); 
+      str += '</ul>';
+    document.getElementById("currentTimers").innerHTML = str;
 }
 
 function startTimer(duration) {

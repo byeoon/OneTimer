@@ -40,17 +40,13 @@
     
         <div class="timer-info">
             <h3>Configuration</h3>
+            <p>What would you like to call this timer?</p>
+            <input type="text" id="timername" name="timername"><br><br>
+            <br><br>
             <p>When would you like the timer to go off?</p>
             <input type="datetime-local" id="timerbox" name="timerbox">
-            <br><br>
-            <h3>Additional Settings</h3>
-            <br>
        </div>
-
         <br>
-        <div class="bio-text" style="background-color: #141414">
-         
-        </div>
         <button id="selectbutton" onclick="createTimer()">Start Timer</button>
     </div>
 
@@ -63,7 +59,7 @@
         <div class="timer-info">
             <h3>My Alarms</h3>
             <br>
-            <div id="currentTimers" style="display: none;">
+            <div id="currentTimers">
                 <br>
             </div>
        </div>
