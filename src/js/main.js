@@ -37,7 +37,7 @@ function createTimer()
 }
 
 function startTimer(duration) {
-    document.getElementById("timerCURRENTTHING").display = "block";
+    document.getElementById("timerCURRENTTHING").visibility = "visible";
     var timer = duration, minutes, seconds;
     setInterval(function () {
         console.log("debug: " + duration + " " + minutes + " " + seconds);
@@ -46,7 +46,7 @@ function startTimer(duration) {
 
         minutes = minutes < 10 ? "0" + minutes : minutes;
         seconds = seconds < 10 ? "0" + seconds : seconds;
-        document.getElementById("timerCURRENTTHING").display = "block";
+        document.getElementById("timerCURRENTTHING").visibility = "visible";
         document.getElementById("timerCURRENTTHING").textContent = minutes + ":" + seconds;
        
 

@@ -5,7 +5,7 @@ ul {
 }
 
 #timerCURRENTTHING {
-  display: none;
+  visibility: hidden;
 }
 
 .dock {
@@ -21,7 +21,7 @@ ul {
 }
 
 .dock-container {
-  padding: 3px;
+  padding: 5px;
   width: auto;
   height: 100%;
   display: flex;
@@ -66,7 +66,7 @@ p3 {
 
 #time {
   font-weight: bolder;
-  font-size: 52px;
+  font-size: 60px;
   backdrop-filter: blur(4px);
 }
 
