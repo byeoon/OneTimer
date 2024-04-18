@@ -28,11 +28,6 @@
             <h2 id="time">12:00:00 </h2>
             <h3 id="timerCURRENTTHING">12:00:00 </h3>
             <br>
-            <br>
-            <div class="button-container">
-                <button id="selectbutton" onClick="TimerSetup()">New Timer</button>
-            </div>
-            <br>
             <div id="currentTimers" style="display: none;">
                 <br>
             </div>
@@ -62,6 +57,7 @@
 
     <div class="dock">
         <div class="dock-container">
+            <button id="createbutton" onClick="TimerSetup()">  <i class="fas fa-plus"></i>  </button>
             <button id="selectbutton" onclick="createTimer()"> <i class="fas fa-alarm-clock"></i> </button>
             <button id="selectbutton" onclick="createTimer()"> <i class="far fa-globe"></i> </button>
             <button id="selectbutton" onclick="createTimer()"> <i class="fas fa-cog"></i> </button>
