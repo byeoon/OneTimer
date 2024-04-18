@@ -1,7 +1,7 @@
 var activeTimers = 0;
 var timerNames = [];
 var timerCountdown = 0;
-var str = '<ul>'
+var str = '<ul>';
 
 const getNavigatorLanguage = () => {
     if (navigator.languages && navigator.languages.length) {
@@ -31,14 +31,14 @@ function showAlarms()
 function createTimer()
 {
     timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
-    timerNames.push(document.getElementById("timername").value());
+    timerNames.push(document.getElementById("timername").textContent);
     var time = timerCountdown / 2;
     startTimer(time);
     alert("countdown: " + timerCountdown);
     activeTimers++;
 
-    timerNames.forEach(function(addToList) {
-        str += '<li>'+ addToList + '</li>';
+    timerNames.forEach(function(timerName) {
+        str += '<li>'+ timerName + '</li>';
     });
       str += '</ul>';
     document.getElementById("currentTimers").innerHTML = str;
