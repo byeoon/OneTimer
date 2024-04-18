@@ -18,14 +18,9 @@ function updateTime() {
     document.getElementById("timezone").textContent = String(String(now).split("(")[1]).split(")")[0];  
  }
 
-function TimerSetup()
+function showTimerSetup()
 {
     document.getElementById("timer-create-popout").style.display = "block";
-
-    if(activeTimers == 0)
-        document.getElementById("currentTimers").style.visibility = "hidden";
-    else
-        document.getElementById("currentTimers").style.visibility = "block";
 }
 
 function showAlarms()
@@ -42,7 +37,7 @@ function createTimer()
     startTimer(time);
     alert("countdown: " + timerCountdown);
     activeTimers++;
-    timerNames.push(document.getElementById("timername").textContent);
+    timerNames.push(document.getElementById("timername").value());
 
     timerNames.forEach(function(addToList) {
         str += '<li>'+ timerNames + '</li>';
