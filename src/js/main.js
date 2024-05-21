@@ -36,7 +36,7 @@ function createTimer()
     secondCountdown = document.getElementById("secondbox").value;
     timerNames.push(document.getElementById("timername").textContent);
     timerCountdown = hourCountdown + minuteCountdown + secondCountdown;
-    console.log(formatTime(timerCountdown));
+    alert(formatTime(timerCountdown));
     var time = timerCountdown;
     startTimer(time);
     alert("countdown: " + timerCountdown);
