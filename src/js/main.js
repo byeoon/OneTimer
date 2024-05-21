@@ -3,6 +3,7 @@ var timerNames = [];
 var timerCountdown = 0;
 var str = '<ul>';
 
+
 const getNavigatorLanguage = () => {
     if (navigator.languages && navigator.languages.length) {
       return navigator.languages[0];
@@ -47,7 +48,6 @@ function createTimer()
 function startTimer(duration) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
-        console.log("debug: " + duration + " " + minutes + " " + seconds);
         minutes = parseInt(timer / 60, 10)
         seconds = parseInt(timer % 60, 10);
 

@@ -41,7 +41,9 @@
             <input type="text" id="timername" name="timername"><br>
             <br>
             <p>When would you like the timer to go off?</p>
-            <input type="datetime-local" id="timerbox" name="timerbox">
+            <input type="text" id="hourbox" name="hourbox"> <p>Hour(s)</p>
+            <input type="text" id="minutebox" name="minutebox"> <p>Minute(s)</p>
+            <input type="text" id="secondbox" name="secondbox"> <p>Second(s)</p>
        </div>
         <br>
         <button id="selectbutton" onclick="createTimer()">Start Timer</button>
@@ -68,7 +70,7 @@
             <button id="createbutton" onClick="showTimerSetup()">  <i class="fas fa-plus"></i>  </button>
             <button id="selectbutton" onclick="showAlarms()"> <i class="fas fa-alarm-clock"></i> </button>
             <button id="selectbutton" onclick="createTimer()"> <i class="far fa-globe"></i> </button>
-            <button id="selectbutton" onclick="createTimer()"> <i class="fas fa-cog"></i> </button>
+            <button id="selectbutton" onclick="openSettings()"> <i class="fas fa-cog"></i> </button>
         </div>
     </div>
 
