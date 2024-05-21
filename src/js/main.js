@@ -35,8 +35,8 @@ function createTimer()
     minuteCountdown = document.getElementById("minutebox").value * 60;
     secondCountdown = document.getElementById("secondbox").value;
     timerNames.push(document.getElementById("timername").textContent);
-
     timerCountdown = hourCountdown + minuteCountdown + secondCountdown;
+    console.log(formatTime(timerCountdown));
     var time = timerCountdown;
     startTimer(time);
     alert("countdown: " + timerCountdown);
@@ -66,6 +66,18 @@ function startTimer(duration) {
         }
     }, 1000);
 }
+
+function formatTime(sec) {
+    const date = new Date(sec * 1000).toUTCString();
+    const time = date.split(' ')[4];
+    const [hours, minutes, seconds] = time.split(':');
+ 
+    const formattedHours = String(hours).padStart(2, '0');
+    const formattedMinutes = String(minutes).padStart(2, '0');
+    const formattedSeconds = String(seconds).padStart(2, '0');
+ 
+    return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
+ }
 
 
 function hidePopout()
