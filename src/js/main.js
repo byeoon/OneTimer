@@ -56,7 +56,7 @@ function createTimer()
     alert("countdown: " + timerCountdown);
 
     timerNames.forEach(function(timer) {
-        str += '<li>'+ timer[activeTimers - 1] + '</li>';
+        str += '<li>'+ timer + '</li>';
     });
       str += '</ul>';
     document.getElementById("currentTimers").innerHTML = str;
@@ -65,9 +65,9 @@ function createTimer()
 function startTimer(duration) {
     var timer = duration, hours, minutes, seconds;
     setInterval(function () {
-        hours = parseInt(timer / 3600, 10);
+        hours = parseInt(timer / 3600, 1);
        // timer %= 3600;
-        minutes = parseInt(timer / 60, 10)
+        minutes = parseInt(timer / 60, 2)
         seconds = parseInt(timer % 60, 10);
 
         hours = hours < 10 ? "0" + hours : hours;
