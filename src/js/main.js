@@ -41,7 +41,7 @@ function createTimer()
     alert("countdown: " + timerCountdown);
 
     timerNames.forEach(function(timerName) {
-        str += '<li>'+ timerName[activeTimers] + '</li>';
+        str += '<li>'+ timerNames[activeTimers].value + '</li>';
     });
       str += '</ul>';
     document.getElementById("currentTimers").innerHTML = str;
@@ -61,9 +61,9 @@ function startTimer(duration) {
         document.getElementById("timerCURRENTTHING").style.visibility = "visible";
         document.getElementById("timerCURRENTTHING").textContent = hours + ":" + minutes + ":" + seconds;
        
-
         if (--timer < 0) {
             timer = 0;
+            alert("The timer went off!");
         }
     }, 1000);
 }
