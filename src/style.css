@@ -8,6 +8,10 @@ ul {
   visibility: hidden;
 }
 
+#hourbox, #minutebox, #secondbox {
+  width: 200px;
+}
+
 .dock {
   width: auto;
   height: 60px;
