@@ -31,8 +31,12 @@ function showAlarms()
 
 function createTimer()
 {
-    timerCountdown = new Date(document.getElementById("timerbox").value).getTime();
+    hourCountdown = document.getElementById("hourbox").value * 60;
+    minuteCountdown = document.getElementById("minutebox").value;
+    secondCountdown = document.getElementById("secondbox").value / 60;
     timerNames.push(document.getElementById("timername").textContent);
+    
+    timerCountdown = hourCountdown + minuteCountdown + secondCountdown;
     var time = timerCountdown / 2;
     startTimer(time);
     alert("countdown: " + timerCountdown);
