@@ -1,4 +1,5 @@
 var timerNames = [];
+var activeTimers = 0;
 var timerCountdown = 0;
 var str = '<ul>';
 
@@ -35,12 +36,12 @@ function createTimer()
     secondCountdown = document.getElementById("secondbox").value;
     timerNames.push(document.getElementById("timername").textContent);
     timerCountdown = hourCountdown + minuteCountdown + secondCountdown;
-
+    activeTimers++;
     startTimer(timerCountdown);
     alert("countdown: " + timerCountdown);
 
     timerNames.forEach(function(timerName) {
-        str += '<li>'+ timerName + '</li>';
+        str += '<li>'+ timerName[activeTimers] + '</li>';
     });
       str += '</ul>';
     document.getElementById("currentTimers").innerHTML = str;
