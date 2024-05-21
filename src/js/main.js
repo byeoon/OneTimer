@@ -51,8 +51,8 @@ function startTimer(duration) {
     setInterval(function () {
         hours = Math.floor(timer / 3600);
         timer %= 3600;
-        minutes = Math.floor(timer / 60);
-        seconds = timer % 60;
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
 
         hours = hours < 10 ? "0" + hours : hours;
         minutes = minutes < 10 ? "0" + minutes : minutes;
