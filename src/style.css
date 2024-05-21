@@ -9,7 +9,7 @@ ul {
 }
 
 #hourbox, #minutebox, #secondbox {
-  width: 200px;
+  width: 100px;
 }
 
 .dock {

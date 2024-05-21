@@ -1,4 +1,3 @@
-var activeTimers = 0;
 var timerNames = [];
 var timerCountdown = 0;
 var str = '<ul>';
@@ -31,16 +30,14 @@ function showAlarms()
 
 function createTimer()
 {
-    hourCountdown = document.getElementById("hourbox").value * 3600;
+    hourCountdown = document.getElementById("hourbox").value * 360;
     minuteCountdown = document.getElementById("minutebox").value * 60;
     secondCountdown = document.getElementById("secondbox").value;
     timerNames.push(document.getElementById("timername").textContent);
     timerCountdown = hourCountdown + minuteCountdown + secondCountdown;
-    alert(formatTime(timerCountdown));
-    var time = timerCountdown;
-    startTimer(time);
+
+    startTimer(timerCountdown);
     alert("countdown: " + timerCountdown);
-    activeTimers++;
 
     timerNames.forEach(function(timerName) {
         str += '<li>'+ timerName + '</li>';
@@ -66,19 +63,6 @@ function startTimer(duration) {
         }
     }, 1000);
 }
-
-function formatTime(sec) {
-    const date = new Date(sec * 1000).toUTCString();
-    const time = date.split(' ')[4];
-    const [hours, minutes, seconds] = time.split(':');
- 
-    const formattedHours = String(hours).padStart(2, '0');
-    const formattedMinutes = String(minutes).padStart(2, '0');
-    const formattedSeconds = String(seconds).padStart(2, '0');
- 
-    return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
- }
-
 
 function hidePopout()
 {
