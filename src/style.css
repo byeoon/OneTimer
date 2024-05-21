@@ -37,7 +37,7 @@ ul {
 
 
 body {
-  background: linear-gradient(-46deg, #ff9361, #ff3b3b, #e83bff, #2b67e9, #16c8df, #28d05d, #63d511);
+  background: linear-gradient(-46deg, #ff3b3b, #e83bff, #2b67e9, #16c8df);
   background-size: 400% 400%;
   animation: gradient 20s ease infinite;
   height: 100vh;
