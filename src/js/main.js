@@ -30,7 +30,7 @@ function showAlarms()
 
 function createTimer()
 {
-    hourCountdown = document.getElementById("hourbox").value * 360;
+    hourCountdown = document.getElementById("hourbox").value * 3600;
     minuteCountdown = document.getElementById("minutebox").value * 60;
     secondCountdown = document.getElementById("secondbox").value;
     timerNames.push(document.getElementById("timername").textContent);
