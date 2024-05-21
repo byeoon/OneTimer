@@ -12,21 +12,36 @@ const getNavigatorLanguage = () => {
     }
   }
 
-
 function updateTime() {
     now = new Date();
     document.getElementById("time").textContent = now.toLocaleString(getNavigatorLanguage, { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true });
     document.getElementById("timezone").textContent = String(String(now).split("(")[1]).split(")")[0];  
  }
 
-function showTimerSetup()
-{
-    document.getElementById("timer-create-popout").style.display = "block";
-}
-
-function showAlarms()
-{
-    document.getElementById("alarms-list-popout").style.display = "block";
+function showMenu(menu) {
+    switch(menu) {
+        case 1:
+            {
+                document.getElementById("timer-create-popout").style.display = "block";
+                break;
+            }
+        case 2:
+            {
+                document.getElementById("alarms-list-popout").style.display = "block";
+                break;
+            }
+        case 3:
+            {
+                document.getElementById("timer-create-popout").style.display = "none";
+                document.getElementById("alarms-list-popout").style.display = "none";
+                break;
+            }
+        case 4:
+            {
+                console.log("Work in progress.");
+                break;
+            }
+    }
 }
 
 function createTimer()
@@ -41,7 +56,7 @@ function createTimer()
     alert("countdown: " + timerCountdown);
 
     timerNames.forEach(function(timer) {
-        str += '<li>'+ timer + '</li>';
+        str += '<li>'+ timer[activeTimers] + '</li>';
     });
       str += '</ul>';
     document.getElementById("currentTimers").innerHTML = str;
@@ -66,12 +81,6 @@ function startTimer(duration) {
             alert("The timer went off!");
         }
     }, 1000);
-}
-
-function hidePopout()
-{
-    document.getElementById("timer-create-popout").style.display = "none";
-    document.getElementById("alarms-list-popout").style.display = "none";
 }
 
 function getCurrentTime(timezone) {
