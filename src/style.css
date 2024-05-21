@@ -49,18 +49,6 @@ body {
   justify-content: center;
 }
 
-#ver {
-  position: absolute;
-  bottom: 0;
-  left: 91%;
-}
-
-#nav {
-  position: absolute;
-  top: 0;
-  left: 97%;
-}
-
 h4,
 p1,
 p2,
@@ -103,7 +91,6 @@ p3 {
 }
 
 
-#pinnedtimezones,
 #currentTimers {
   color: #fff;
 }
