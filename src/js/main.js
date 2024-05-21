@@ -40,8 +40,8 @@ function createTimer()
     startTimer(timerCountdown);
     alert("countdown: " + timerCountdown);
 
-    timerNames.forEach(function(timerName) {
-        str += '<li>'+ timerNames[activeTimers].value + '</li>';
+    timerNames.forEach(function(timer) {
+        str += '<li>'+ timer + '</li>';
     });
       str += '</ul>';
     document.getElementById("currentTimers").innerHTML = str;
