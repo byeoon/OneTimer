@@ -41,6 +41,11 @@ function showMenu(menu) {
                 console.log("Work in progress.");
                 break;
             }
+        case 5:
+            {
+                console.log("Work in progress.");
+                break;
+            }
     }
 }
 
@@ -65,7 +70,7 @@ function createTimer()
 function startTimer(duration) {
     var timer = duration, hours, minutes, seconds;
     setInterval(function () {
-        hours = parseInt(timer / 3600, 1);
+        hours = parseInt(timer / 3600, 2);
         timer %= 3600;
         minutes = parseInt(timer / 60, 2)
         seconds = parseInt(timer % 60, 10);
