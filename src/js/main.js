@@ -49,9 +49,10 @@ function createTimer()
 function startTimer(duration) {
     var timer = duration, hours, minutes, seconds;
     setInterval(function () {
-        hours = parseInt(timer * 3600, 10)
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
+        hours = Math.floor(timer / 3600);
+        timer %= 3600;
+        minutes = Math.floor(timer / 60);
+        seconds = timer % 60;
 
         hours = hours < 10 ? "0" + hours : hours;
         minutes = minutes < 10 ? "0" + minutes : minutes;
