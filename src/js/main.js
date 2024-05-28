@@ -70,8 +70,7 @@ function createTimer()
 function startTimer(duration) {
     var timer = duration, hours, minutes, seconds;
     setInterval(function () {
-        hours = parseInt(timer / 3600, 2);
-        timer %= 3600;
+        hours = parseInt(timer % 3600, 2);
         minutes = parseInt(timer / 60, 2)
         seconds = parseInt(timer % 60, 10);
 

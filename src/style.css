@@ -147,7 +147,7 @@ p3 {
 
 #close-button:hover,
 .close-button:hover {
-  background-color: rgb(97, 62, 62);
+  background-color: #814c4c;
 }
 
 .button-container {
@@ -169,7 +169,7 @@ p3 {
   max-width: 300px;
   text-align: center;
   border-radius: 10px;
-  border: 1px solid #2d2942;
+  border: 1px solid #0f0e17;
 }
 
 #alarms-list-popout {
@@ -177,7 +177,7 @@ p3 {
   position: fixed;
   top: 60%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-60%, -50%);
   padding: 20px;
   background-color: #171717;
   color: #fff;
